@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFuture | Renewable Energy</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #2E8B57; /* Sea Green */
+            --secondary: #4682B4; /* Steel Blue */
+            --accent: #FFD700; /* Gold/Sun */
+            --dark: #333;
+            --light: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Header & Hero */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+
+        .navbar h1 { margin: 0; }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 { font-size: 3.5rem; margin-bottom: 10px; }
+        .btn {
+            background: var(--accent);
+            color: var(--dark);
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        /* Sections */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card i { font-size: 3rem; color: var(--secondary); margin-bottom: 15px; display:block; }
+
+        /* Statistics Section */
+        .stats {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        
+        @media(max-width: 768px){
+            .hero h2 { font-size: 2rem; }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <h1>EcoFuture</h1>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#types">Technology</a>
+                <a href="#impact">Impact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Powering Tomorrow, Today</h2>
+        <p>Sustainable energy solutions for a cleaner planet.</p>
+        <a href="#types" class="btn">Explore Technologies</a>
+    </section>
+
+    <section id="types" class="container">
+        <h2 class="section-title">Renewable Technologies</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>Solar Power</h3>
+                <p>Harnessing the sun's radiation through photovoltaic cells to generate clean electricity.</p>
+                <p><strong>Efficiency:</strong> ~20-22%</p>
+            </div>
+
+            <div class="card">
+                <h3>Wind Energy</h3>
+                <p>Converting kinetic energy from wind into mechanical power using large turbines.</p>
+                <p><strong>Capacity Factor:</strong> ~35-40%</p>
+            </div>
+
+            <div class="card">
+                <h3>Hydroelectric</h3>
+                <p>Using the gravitational force of falling or flowing water to create energy.</p>
+                <p><strong>Reliability:</strong> Base-load power</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="stats">
+        <div class="container">
+            <h2 style="color:white;">Why It Matters</h2>
+            <div class="grid-3">
+                <div>
+                    <h1>0%</h1>
+                    <p>Carbon Emissions</p>
+                </div>
+                <div>
+                    <h1>Infinite</h1>
+                    <p>Resource Availability</p>
+                </div>
+                <div>
+                    <h1>Low</h1>
+                    <p>Long-term Costs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>EcoFuture &copy; 2025 | Designed for a Green Earth</p>
+    </footer>
+
+</body>
+</html>
